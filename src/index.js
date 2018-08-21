@@ -22,8 +22,18 @@ class App extends Component {
     counter: 0
   };
 
+  //callback
+  /*
   handleClick = () => {
-    this.setState({ counter: this.state.counter + 1 });
+    this.setState({ counter: this.state.counter + 1 }, () =>
+      console.log(this.state.counter)
+    );
+  };
+  */
+
+  handleClick = () => {
+    this.setState(state => ({ counter: state.counter + 1 }));
+    this.setState(state => ({ counter: state.counter + 1 }));
   };
 
   render() {
