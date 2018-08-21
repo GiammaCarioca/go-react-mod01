@@ -2,4 +2,4 @@ const func = (a, b) => {
   return a + b;
 };
 
-alert(func(3, 5));
+alert(func(3, 7));
