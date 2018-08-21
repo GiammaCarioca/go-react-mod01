@@ -3,16 +3,24 @@ import { render } from "react-dom";
 
 class Button extends Component {
   render() {
-    return <a href="">Clique aqui!</a>;
+    return (
+      <a href="" onClick={this.props.onClick}>
+        {this.props.children}
+      </a>
+    );
   }
 }
 
 class App extends Component {
+  handleClick() {
+    alert("botão clicado!");
+  }
+
   render() {
     return (
       <Fragment>
         <h1>Ciao ragazzi</h1>
-        <Button />
+        <Button onClick={this.handleClick}>Clique aqui</Button>
       </Fragment>
     );
   }
